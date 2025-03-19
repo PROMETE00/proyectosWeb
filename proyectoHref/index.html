@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Etiquetas HTML</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <nav>
+        <br>
+        <a href="/home/prome/materias/programacionWeb/miblog.html">Mi blog</a>
+        <br>
+        <a href="/home/prome/materias/programacionWeb/tarea.html">Tarea Tabla</a>
+        <br>
+        <a href="/home/prome/materias/programacionWeb/index.html">Tarea Etiquetas</a>
+        <br>
+        <a href="/home/prome/materias/programacionWeb/galeria.html">Galeria</a>
+        <br>
+        <a href="/home/prome/materias/programacionWeb/contacto.html">Contacto</a>
+    </nav>
+    <header>
+        <h1><center>Tarea sobre las etiquetas de HTML</center></h1>
+        <nav>
+            <a href="#estructura">Estructura</a> |
+            <a href="#encabezados">Encabezados</a> |
+            <a href="#parrafos">Párrafos y Texto</a> |
+            <a href="#enlaces">Enlaces</a> |
+            <a href="#multimedia">Multimedia</a> |
+            <a href="#tablas">Tablas</a> |
+            <a href="#formularios">Formularios</a> |
+            <a href="#listas">Listas</a> |
+            <a href="#semantica">Semántica</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="estructura">
+            <h2><center>Etiquetas de Estructura</center></h2>
+            <p>1.-  <code>&lt;!DOCTYPE html&gt;</code>: Declara el tipo de documento HTML.</p>
+            <p>2.-  <code>&lt;html&gt;</code>: Raíz del documento HTML.</p>
+            <p>3.-  <code>&lt;head&gt;</code>: Contiene metadatos del documento.</p>
+            <p>4.-  <code>&lt;title&gt;</code>: Título del documento.</p>
+            <p>5.-  <code>&lt;body&gt;</code>: Contenido del documento.</p>
+        </section>
+
+        <section id="encabezados">
+            <h2><center>Etiquetas de Encabezados</center></h2>
+            <h1>6.-  <code>&lt;h1&gt;</code>Encabezado 1</h1>
+            <h2>7.-  <code>&lt;h2&gt;</code>Encabezado 2</h2>
+            <h3>8.-  <code>&lt;h3&gt;</code>Encabezado 3</h3>
+            <h4>9.-  <code>&lt;h4&gt;</code>Encabezado 4</h4>
+            <h5>10.-  <code>&lt;h5&gt;</code>Encabezado 5</h5>
+            <h6>11.-  <code>&lt;h6&gt;</code>Encabezado 6</h6>
+        </section>
+
+        <section id="parrafos">
+            <h2><center>Etiquetas de Párrafos y Texto</center></h2>
+            <p>12.-  <code>&lt;p&gt;</code>Estas etiquetas se utilizan para estructurar el texto en párrafos y otros elementos.</p>
+            <p>13.-  <code>&lt;span&gt;</code>Este es un párrafo con <span>texto en línea</span>.</p>
+            <p>14.-  <code>&lt;br&gt;</code>Este es un párrafo con un salto de línea.<br>Aquí continúa el texto.</p>
+            <hr>
+            <p>15.-  <code>&lt;hr&gt;</code>Una línea horizontal separa este párrafo del anterior.</p>
+        </section>
+
+        <section id="enlaces">
+            <h2><center>Etiquetas de Enlaces y Navegación</center></h2>
+            <p>16.-  <code>&lt;a&gt;</code><a href="https://www.youtube.com">Youtube.com</a></p>
+            <p>17.-  <code>&lt;link&gt;</code>Link a css: <code>&lt;link href="style.css" rel="stylesheet" /&gt;</code></p>
+            <p>18.-  <code>&lt;nav&gt;</code></p><nav>
+                <a href="#estructura">Estructura</a> |
+                <a href="#encabezados">Encabezados</a> |
+                <a href="#parrafos">Párrafos</a>
+            </nav>
+        </section>
+
+        <section id="multimedia">
+            <h2><center>Etiquetas de Imágenes y Multimedia</center></h2>
+            <p>19.-  <code>&lt;img&gt;</code>Etiqueta para mostrar una imagen</p>
+            <img src="/home/prome/materias/programacionWeb/evangelion.jpg" width="200">
+            <br>
+            <p>20.-  <code>&lt;video&gt;</code>Etiqueta para mostrar una video</p>
+            <video width="320" height="240" controls>
+                <source src="/home/prome/materias/programacionWeb/gojo-satoru-infinite-power.3840x2160.mp4" type="video/mp4">
+            </video>
+            <p>21.-  <code>&lt;audio&gt;</code>Etiqueta para mostrar un audio</p>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+        </section>
+
+        <section id="tablas">
+            <h2><center>Etiquetas de Tablas</center></h2>
+            <p>22.-  <code>&lt;table&gt;</code>Etiqueta de tablas <br>23.-  <code>&lt;tr&gt;</code> Fila de tabla
+            <br>24.-  <code>&lt;td&gt;</code> Celda de tabla <br>25.-  <code>&lt;th&gt;</code> Encabezado de tabla
+            </p>
+            <table border="1">
+                <tr>
+                    <th>Encabezado 1</th>
+                    <th>Encabezado 2</th>
+                </tr>
+                <tr>
+                    <td>Celda 1</td>
+                    <td>Celda 2</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="formularios">
+            <h2><center>Etiquetas de Formularios</center></h2>
+            <p>26.-  <code>&lt;form&gt;</code>Etiqueta para crear formularios.</p>
+            <form action="/submit" method="post">
+                <label for="nombre">27.-  <code>&lt;input&gt;</code> Campo de entrada:</label>
+                <input type="text" id="nombre" name="nombre"><br><br>
+                <label for="mensaje">28.-  <code>&lt;textarea&gt;Area de texto:</code> </label>
+                <textarea id="mensaje" name="mensaje"></textarea><br><br>
+                <label for="opciones">29.-  <code>&lt;select&gt;Menù desplegable</label>
+                <select id="opciones" name="opciones">
+                    <option value="1">Opción 1</option>
+                    <option value="2">Opción 2</option>
+                </select><br><br>
+                <p>30.-  <code>&lt;select&gt;Boton</p><nav></nav>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="listas">
+            <h2><center>Etiquetas de Listas</center></h2>
+            <p>31.-  <code>&lt;ul&gt;</code>Listas no ordenadas</p>
+            <ul>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+            </ul>
+            <p>32.-  <code>&lt;ol&gt;</code>Listas ordenadas</p>
+            <ol>
+                <p>33.-  <code>&lt;li&gt;</code>Elemento de la lista</p>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+            </ol>
+        </section>
+
+        <section id="semantica">
+            <h2><center>Etiquetas de Semántica</center></h2>
+            <p>34.-  <code>&lt;header&gt;</code>Encabezado</p>
+            <header>Encabezado</header>
+            <p>35.-  <code>&lt;main&gt;</code>Contenido principal</p>
+            <main>Contenido principal</main>
+            <p>36.-  <code>&lt;section&gt;</code>Secciòn</p>
+            <section>Sección</section>
+            <p>37.-  <code>&lt;article&gt;</code>Articulo</p>
+            <article>Artículo</article>
+            <p>38.-  <code>&lt;aside&gt;</code>Contenido relacionado</p>
+            <aside>Contenido relacionado</aside>
+            <p>39.-  <code>&lt;footer&gt;</code>Pie de pagina</p>
+            <footer><p>&copy; 2023 Pie de pagina</p></footer>
+        </section>
+    </main>
+</body>
+</html>

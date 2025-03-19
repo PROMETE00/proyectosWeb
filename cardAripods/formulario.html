@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario HTML</title>
+</head>
+<body>
+    <h1>Account settings</h1>
+    <h2>Basics</h2>
+    <p>Having an up-to-date email address attached to your account</p>
+    <p>is a great step toward improving account security</p>
+    <label for="email">Email address</label>
+    <br>
+    <input type="email" name="email" id="email" placeholder="Enter your email">
+    <br><br>
+    <label for="contra">Password</label>
+    <br>
+    <input type="password" name="contra" id="contra" placeholder="Password">
+    <br>
+    <button type="submit">Change your password</button>
+    <br><br>
+    <label for="country">Country</label>
+    <br>
+    <select id="country" name="country">
+        <option value="1">Opción 1</option>
+        <option value="2">Opción 2</option>
+    </select>
+    <br><br>
+    <label for="language">Language</label>
+    <br>
+    <select id="language" name="language">
+        <option value="1">Opción 1</option>
+        <option value="2">Opción 2</option>
+    </select>
+    <br><br>
+    <h2>Profile</h2>
+    <p>The information will be shown publicly so be</p>
+    <p>careful what information you provide</p>
+    <label for="first-name">First Name</label>
+    <br>
+    <input type="text" name="first-name" id="first-name" placeholder="Enter your first name">
+    <br><br>
+    <label for="last-name">Last Name</label>
+    <br>
+    <input type="text" name="last-name" id="last-name" placeholder="Enter your last name">
+    <br><br>
+    <label for="picture">Picture</label>
+    <br>
+    <button type="submit">Change a picture</button>
+    <br><br>
+    <label for="username">Username</label>
+    <br>
+    <input type="text" name="username" id="username" placeholder="Enter your username">
+    <br><br>
+    <label for="about">About You</label>
+    <br>
+    <textarea name="about" id="about" cols="30" rows="5" placeholder="Tell us about yourself"></textarea>
+    <br><br>
+    <h2>Billing</h2>
+    <p>The information will be shown publicly so be</p>
+    <p>careful what information you provide</p>
+    <label for="change-plan">Change Plan</label>
+    <br>
+    <textarea name="change-plan" id="change-plan" cols="30" rows="5">
+        Basic
+        1 GB Uploads
+        $5/month
+    </textarea>
+    <br>
+    <textarea name="change-plan" id="change-plan" cols="30" rows="5">
+        Essential
+        5 GB Uploads
+        $10/month
+    </textarea>
+    <br>
+    <textarea name="change-plan" id="change-plan" cols="30" rows="5">
+        Pro
+        15 GB Uploads
+        $20/month
+    </textarea>
+    <br><br>
+    <label for="payment-method">Payment Method</label>
+    <br><br>
+    <label for="visa">Visa ending in 5555</label>
+    <br>
+    <label for="paypal">Expires 1/2022</label>
+    <button type="submit">Update</button>
+    <br><br>
+    <h2>Notifications</h2>
+    <p>Get notified of activity going on with your</p>
+    <p>account. Notifications will be sent to the</p>
+    <p>email that you have provided</p>
+    <br>
+    <label for="account-activity">
+        <input type="checkbox" for="account-activity" id="account-activity" name="notifications" value="account-activity">
+        Account Activitys
+    </label>
+    <br>
+    <label for="account-activity" id="account-activity" >
+        Get Important Notifications about your activity you've missed
+    </label>
+    <br>
+    <input for="new-for-your" type="checkbox" id="new-for-your" name="notifications" value="meetups-near-you">
+    <label for="new-for-your" id="new-for-your">
+        New For You
+    </label>
+    <br>
+    <label for="new-for-your" id="new-for-your">
+        A Weekly email featuring activities form people you follow
+    </label>
+    <br>
+    <label for="meetups-nears">
+        <input type="checkbox" id="meetups-nears" name="notifications" value="meetups-near-you">
+        Meetups Near You
+    </label>
+    <br>
+    <label for="meetups-nears">
+        Get an email when a meetups is posted close your location
+    </label>
+    <br>
+    <label for="company-news">
+        <input type="checkbox" id="company-news" name="notifications" value="company-news">
+        Company-news
+    </label>
+    <br>
+    <label for="company-news">
+        Get news announcements and products updates
+    </label><br>
+    <label for="weekly-jobs">
+        <input type="checkbox" id="weekly-jobs" name="notifications" value="weekly-jobs">
+        Weekly Jobs
+    </label>
+    <br>
+    <label for="weekly-jobs">
+        Weekly digest of design jobs</label>
+    <br><br>
+    <!-- Botón para seleccionar todos los checkboxes -->
+    <button type="button" onclick="selectAllCheckboxes()">Select All</button>
+    <br><br>
+    <!-- Botones de Cancel y Save Settings -->
+    <button class="cancel-button" onclick="clearForm()">Cancel</button>
+    <button class="save-button" onclick="alert('Save Settings functionality not implemented yet.')">Save Settings</button>
+
+    <script>
+        // Función para borrar el formulario
+        function clearForm() {
+            const formElements = document.querySelectorAll('input, textarea, select');
+            formElements.forEach(element => {
+                if (element.type === 'checkbox' || element.type === 'radio') {
+                    element.checked = false; // Desmarcar checkboxes y radios
+                } else {
+                    element.value = ''; // Borrar el valor de inputs y textareas
+                }
+            });
+        }
+
+        // Función para seleccionar todos los checkboxes
+        function selectAllCheckboxes() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = true;
+            });
+        }
+    </script>
+</body>
+</html>
